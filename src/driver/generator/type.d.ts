@@ -38,4 +38,6 @@ export interface PageEnv {
   };
   _: typeof lodash;
   moment: typeof moment;
+  markdown: typeof markdown;
+
 }
