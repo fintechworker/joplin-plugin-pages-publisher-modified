@@ -38,6 +38,7 @@ export interface PageEnv {
   };
   _: typeof lodash;
   moment: typeof moment;
+  //引入markdown模块，提供ejs模板摘要处理能力。
   markdown: typeof markdown;
 
 }
