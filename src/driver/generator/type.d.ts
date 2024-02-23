@@ -23,7 +23,7 @@ export type ArticleForPage = Article & {
   fullUrl: string;
   meta: Record<string, unknown>;
 };
-
+var markdown = require( "markdown" ).markdown;
 export interface PageEnv {
   $page: Record<string, unknown>;
   $site: {
