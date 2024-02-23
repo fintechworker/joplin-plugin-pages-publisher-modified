@@ -36,6 +36,7 @@ import {
   getOutputThemeAssetsDir,
   getOutputNoJekyll,
 } from './pathHelper';
+import path from 'path';
 
 ejs.fileLoader = fs.readFileSync;
 
@@ -358,13 +359,14 @@ export class PageRenderer {
     }
 
     const { outputAssetsDir } = this;
-
+//增加处理windows路径问题
     await fs.copy(this.themeDir, this.outputDir, {
       filter: (src, dest) =>
         dest === this.outputDir ||
-        dest.startsWith(outputAssetsDir) ||
+        path.resolve(dest).startsWith(path.resolve(outputAssetsDir)) ||
         (src.endsWith('.json') && !src.endsWith('config.json')),
     });
+
   }
 
   private async copyIcon() {
