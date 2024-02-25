@@ -3,4 +3,4 @@
 ## 修订内容
 1.通过引入markdown模块[https://github.com/millerblack/markdown-js](https://github.com/millerblack/markdown-js)，可使用通过引用`markdown.toHTML(your md_content ).replace(/<[^>]+>/g,"").replace(/[\r\n\s]/g, "").replace(" ","").substr(0,LENGTH)`在ejs页面提取文章摘要。
 
-2.配合自定义模板实现joplin 笔记发布到github pages。
+2.配合自定义模板Blog-SimpleWhite[https://github.com/fintechworker/Blog-SimpleWhite](https://github.com/fintechworker/Blog-SimpleWhite)实现joplin 笔记发布到github pages。
